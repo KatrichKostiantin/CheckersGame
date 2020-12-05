@@ -39,32 +39,6 @@ class ApiTester:
             resp = (await resp.json())['data']
             logging.info(f'Player {player} made move {move}, response: {resp}')
 
-    async def _get_game(self):
-        async with self._session.get(f'{self._api_url}/game') as resp:
-            return (await resp.json())['data']
-
-    async def _play_game(self):
-        current_game_progress = await self._get_game()
-        is_finished = current_game_progress['is_finished']
-        is_started = current_game_progress['is_started']
-
-        while is_started and not is_finished:
-            player_num_turn = 1 if current_game_progress['whose_turn'] == 'RED' else 2
-            assert self._game.whose_turn() == player_num_turn
-
-            move = random.choice(self._game.get_possible_moves())
-
-            await self._make_move(player_num_turn, move)
-
-            if self._rand_sleep:
-                await asyncio.sleep(random.uniform(1.0, 3.5))
-            else:
-                await asyncio.sleep(0.2)
-
-            current_game_progress = await self._get_game()
-            is_finished = current_game_progress['is_finished']
-            is_started = current_game_progress['is_started']
-
     def start_test(self):
         asyncio.run_coroutine_threadsafe(self.start(), self._loop)
 
@@ -90,3 +64,29 @@ class ApiTester:
         logging.info(str(last_game_progress))
 
         await self._session.close()
+
+    async def _play_game(self):
+        current_game_progress = await self._get_game()
+        is_finished = current_game_progress['is_finished']
+        is_started = current_game_progress['is_started']
+
+        while is_started and not is_finished:
+            player_num_turn = 1 if current_game_progress['whose_turn'] == 'RED' else 2
+            assert self._game.whose_turn() == player_num_turn
+
+            move = random.choice(self._game.get_possible_moves())
+
+            await self._make_move(player_num_turn, move)
+
+            if self._rand_sleep:
+                await asyncio.sleep(random.uniform(1.0, 3.5))
+            else:
+                await asyncio.sleep(0.2)
+
+            current_game_progress = await self._get_game()
+            is_finished = current_game_progress['is_finished']
+            is_started = current_game_progress['is_started']
+
+    async def _get_game(self):
+        async with self._session.get(f'{self._api_url}/game') as resp:
+            return (await resp.json())['data']

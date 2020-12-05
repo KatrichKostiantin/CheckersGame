@@ -68,7 +68,7 @@ class BDManager:
             self.tiles.add(tile)
             self.c.tag_raise(tile)
             if piece.king:
-                self.draw_king_icon(i,j)
+                self.draw_king_icon(i, j)
         # make GUI updates board every second
         self.root.after(1, self.update_board)
 
@@ -78,11 +78,11 @@ class BDManager:
             self.c.tag_raise(tile)
 
         slip = math.sqrt(2) * self.row_height - (self.row_height - 20)
-        left =  self.c.create_line(j * self.col_width + slip, i * self.row_height + slip, 
-                                    (j + 1) * self.col_width - slip, (i + 1) * self.row_height - slip,
-                                    width=5, fill="white")
+        left = self.c.create_line(j * self.col_width + slip, i * self.row_height + slip,
+                                  (j + 1) * self.col_width - slip, (i + 1) * self.row_height - slip,
+                                  width=5, fill="white")
         submit_tile(left)
-        right =  self.c.create_line((j + 1) * self.col_width - slip, i * self.row_height + slip,  
-                                    j * self.col_width + slip, (i + 1) * self.row_height - slip,
-                                    width=5, fill="white")
+        right = self.c.create_line((j + 1) * self.col_width - slip, i * self.row_height + slip,
+                                   j * self.col_width + slip, (i + 1) * self.row_height - slip,
+                                   width=5, fill="white")
         submit_tile(right)

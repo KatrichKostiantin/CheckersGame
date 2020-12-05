@@ -13,7 +13,7 @@ def start_server(loop):
     threading.Thread(target=main, args=(loop,)).start()
 
 
-def test_server(loop, rand_sleep=False):
+def test_server(loop, rand_sleep=True):
     from api_tester import ApiTester
 
     threading.Thread(target=ApiTester(loop, rand_sleep=rand_sleep).start_test).start()
