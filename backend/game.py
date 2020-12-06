@@ -27,6 +27,7 @@ class Game:
         self._available_current_move_time = self._available_move_time
         self._players = {}
         self._lost_time_player = None
+        self._last_move = None
         self._colors_table = {
             1: 'RED',
             2: 'BLACK'
@@ -135,7 +136,15 @@ class Game:
         if player['token'] != token:
             raise ForbiddenMoveError
         try:
+            if self._last_move is not None and self._last_move['player'] == self._whose_turn():
+                self._last_move['last_moves'].append(move)
+            else:
+                self._last_move = {
+                    'player': self._whose_turn(),
+                    'last_moves': [move]
+                }
             self._game.move(move)
+            self._last_move = move
             logging.info(
                 f'{player["team_name"]} made move ({move}) at {datetime.datetime.now().isoformat()}'
             )
@@ -157,6 +166,7 @@ class Game:
             'winner': self._winner(),
             'board': self._board(),
             'available_time': self._available_current_move_time,
+            'last_move': self._last_move,
             'is_started': self.is_started(),
             'is_finished': self.is_finished()
         }
