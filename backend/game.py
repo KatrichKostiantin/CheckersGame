@@ -144,7 +144,6 @@ class Game:
                     'last_moves': [move]
                 }
             self._game.move(move)
-            self._last_move = move
             logging.info(
                 f'{player["team_name"]} made move ({move}) at {datetime.datetime.now().isoformat()}'
             )
