@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e875566b-9433-40a9-b2db-956bbf45a565" name="Default Changelist" comment="Add creating tree">
+    <list default="true" id="e875566b-9433-40a9-b2db-956bbf45a565" name="Default Changelist" comment="Add method choice_best_move">
+      <change beforePath="$PROJECT_DIR$/../ChackersBot/Gamer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ChackersBot/Gamer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChackersBot/Minimax.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ChackersBot/Minimax.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -60,7 +61,7 @@
       <recent name="C:\Могилянка\ОШІ\ChackersBot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mainBot (1)">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Gamer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChackersBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,9 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.mainBot (1)" />
         <item itemvalue="Python.mainBot" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.Gamer" />
         <item itemvalue="Python.server" />
       </list>
@@ -198,7 +199,8 @@
       <updated>1607193611554</updated>
       <workItem from="1607193613112" duration="10485000" />
       <workItem from="1607246104909" duration="15127000" />
-      <workItem from="1607447097509" duration="6535000" />
+      <workItem from="1607447097509" duration="8685000" />
+      <workItem from="1607537485546" duration="1228000" />
     </task>
     <task id="LOCAL-00002" summary="Attach new bot">
       <created>1607193889300</created>
@@ -242,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607263096188</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add method choice_best_move">
+      <created>1607457344359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607457344359</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +279,8 @@
     <MESSAGE value="Add config file" />
     <MESSAGE value="Update config and logging" />
     <MESSAGE value="Add creating tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add creating tree" />
+    <MESSAGE value="Add method choice_best_move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method choice_best_move" />
   </component>
   <component name="WindowStateProjectService">
     <state x="531" y="230" width="954" height="593" key="#xdebugger.evaluate" timestamp="1607262694105">
@@ -281,38 +291,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607247078181" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1607457112266">
+    <state width="1493" height="78" key="GridCell.Tab.0.bottom" timestamp="1607538269706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607457112266" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1607457112266">
+    <state width="1493" height="78" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607538269706" />
+    <state width="1493" height="78" key="GridCell.Tab.0.center" timestamp="1607538269705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607457112266" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1607457112266">
+    <state width="1493" height="78" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607538269705" />
+    <state width="1493" height="78" key="GridCell.Tab.0.left" timestamp="1607538269705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607457112266" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1607457112266">
+    <state width="1493" height="78" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607538269705" />
+    <state width="1493" height="78" key="GridCell.Tab.0.right" timestamp="1607538269705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607457112266" />
-    <state width="1493" height="75" key="GridCell.Tab.1.bottom" timestamp="1607456884614">
+    <state width="1493" height="78" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607538269705" />
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1607502452724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="75" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607456884614" />
-    <state width="1493" height="75" key="GridCell.Tab.1.center" timestamp="1607456884614">
+    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607502452724" />
+    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1607502452723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="75" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607456884614" />
-    <state width="1493" height="75" key="GridCell.Tab.1.left" timestamp="1607456884613">
+    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607502452723" />
+    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1607502452723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="75" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607456884613" />
-    <state width="1493" height="75" key="GridCell.Tab.1.right" timestamp="1607456884614">
+    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607502452723" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1607502452723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="75" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607456884614" />
+    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607502452723" />
     <state x="628" y="115" key="RollbackChangesDialog" timestamp="1607259609144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -321,22 +331,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607247080623" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607263099097">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607457347465">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607263099097" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607457347465" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607191300293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607191300293" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607537869355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607537869355" />
     <state x="320" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607262185173">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1607262185173" />
-    <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1607262374644">
+    <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1607538446190">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607262374644" />
+    <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607538446190" />
     <state x="611" y="198" key="refactoring.ChangeSignatureDialog" timestamp="1607198698727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -366,11 +380,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CheckersGame$mainBot.coverage" NAME="mainBot Coverage Results" MODIFIED="1607457110001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ChackersBot" />
+    <SUITE FILE_PATH="coverage/CheckersGame$mainBot.coverage" NAME="mainBot Coverage Results" MODIFIED="1607459258728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ChackersBot" />
     <SUITE FILE_PATH="coverage/CheckersPy$game.coverage" NAME="game Coverage Results" MODIFIED="1607177720324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monkey_patched" />
     <SUITE FILE_PATH="coverage/CheckersGame$Gamer.coverage" NAME="Gamer Coverage Results" MODIFIED="1607194924411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ChackersBot" />
-    <SUITE FILE_PATH="coverage/CheckersGame$mainBot__1_.coverage" NAME="mainBot (1) Coverage Results" MODIFIED="1607457112250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ChackersBot" />
-    <SUITE FILE_PATH="coverage/CheckersGame$main.coverage" NAME="main Coverage Results" MODIFIED="1607457107320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CheckersGame$mainBot__1_.coverage" NAME="mainBot (1) Coverage Results" MODIFIED="1607459281666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ChackersBot" />
+    <SUITE FILE_PATH="coverage/CheckersGame$main.coverage" NAME="main Coverage Results" MODIFIED="1607538194785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CheckersPy$api_tester.coverage" NAME="api_tester Coverage Results" MODIFIED="1607177700576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CheckersPy$main.coverage" NAME="main Coverage Results" MODIFIED="1607176838306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CheckersGame$server.coverage" NAME="server Coverage Results" MODIFIED="1607182373387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
