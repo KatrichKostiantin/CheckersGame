@@ -23,14 +23,15 @@ class Game:
         self._game = game
         self._is_started = False
         self._is_finished = False
-        self._available_move_time = 3.2  # 200 ms plus, cause for network latency
+        self._available_move_time = 2.2  # 200 ms plus, cause for network latency
         self._available_current_move_time = self._available_move_time
         self._players = {}
         self._lost_time_player = None
         self._last_move = None
         self._colors_table = {
             1: 'RED',
-            2: 'BLACK'
+            2: 'BLACK',
+            None: 'None'
         }
 
     def _whose_turn(self):
